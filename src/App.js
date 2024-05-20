@@ -49,7 +49,16 @@ function App() {
    
     </BrowserRouter>
     </AuthProvider>
+
   );
+axios.get(`${process.env.REACT_APP_BASE_URL}/api/endpoint`)
+  .then(response => {
+    // handle success
+  })
+  .catch(error => {
+    // handle error
+  });
+
 }
 
 export default App;
