@@ -51,13 +51,6 @@ function App() {
     </AuthProvider>
 
   );
-axios.get(`${process.env.REACT_APP_BASE_URL}/api/endpoint`)
-  .then(response => {
-    // handle success
-  })
-  .catch(error => {
-    // handle error
-  });
 
 }
 
