@@ -16,7 +16,7 @@ const[status,setStatus]=useState(false)
 
 const login  = (username,password) =>{
     axios
-      .post("http://localhost:3000/login", { username, password,status })
+      .post("https://dickkny.onrender.com/api/endpoint", { username, password,status })
       .then((result) => {
         // console.log(result?.data,"data4545");
         if (result.data.message === "Success" && result.data.data.status === true ) {
