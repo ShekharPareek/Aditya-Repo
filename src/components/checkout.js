@@ -28,7 +28,7 @@ const Checkout = () => {
             const decodedToken = jwtDecode(token);
             const userId = decodedToken.userId;
 
-            const response = await fetch(`http://localhost:3000/getCartOfUser/${userId}`, {
+            const response = await fetch(`https://dickkny.onrender.com/getCartOfUser/${userId}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const Checkout = () => {
 
     const fetchProductData = async (productId) => {
         try {
-            const response = await fetch(`http://localhost:3000/getAllProductsById/${productId}`, {
+            const response = await fetch(`https://dickkny.onrender.com/getAllProductsById/${productId}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -109,7 +109,7 @@ const Checkout = () => {
 
     const fetchCouponData = async () => {
         try {
-            const response = await fetch('http://localhost:3000/getAllCoupons');
+            const response = await fetch('https://dickkny.onrender.com/getAllCoupons');
             if (!response.ok) {
                 throw new Error('Failed to fetch coupon data');
             }
