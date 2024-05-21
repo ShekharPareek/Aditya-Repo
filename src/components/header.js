@@ -35,7 +35,7 @@ const Header = () => {
             const userId = decodedToken.userId;
 
             // Make a request to your backend API to fetch the cart data
-            const response = await fetch(`http://localhost:3000/getCartOfUser/${userId}`, {
+            const response = await fetch(`https://dickkny.onrender.com/getCartOfUser/${userId}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ const Header = () => {
     const fetchProductData = async (productId) => {
         try {
             // Make a request to your backend API to fetch the product data
-            const response = await fetch(`http://localhost:3000/getAllProductsById/${productId}`, {
+            const response = await fetch(`https://dickkny.onrender.com/getAllProductsById/${productId}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -88,7 +88,7 @@ const Header = () => {
     // Function to fetch coupon data from backend API
     const fetchCouponData = async () => {
         try {
-            const response = await fetch('http://localhost:3000/getAllCoupons');
+            const response = await fetch('https://dickkny.onrender.com/getAllCoupons');
             if (!response.ok) {
                 throw new Error('Failed to fetch coupon data');
             }
