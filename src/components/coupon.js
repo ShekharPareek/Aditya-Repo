@@ -12,7 +12,7 @@ const CouponComponent = () => {
         // Function to fetch coupons data from the API
         const fetchCoupons = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/getAllCoupons'); // Adjust the API endpoint accordingly
+                const response = await axios.get('https://dickkny.onrender.com/getAllCoupons'); // Adjust the API endpoint accordingly
                 setCoupons(response.data);
             } catch (error) {
                 console.error('Error fetching coupons:', error);
