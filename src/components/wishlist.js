@@ -24,7 +24,7 @@ const Wishlist = () => {
                 const decodedToken = jwtDecode(token);
                 const userId = decodedToken.userId;
                 // Make request to backend API to fetch wishlist items for the user
-                const response = await axios.get(`http://localhost:3000/getWishListOfUser/${userId}`);
+                const response = await axios.get(`https://dickkny.onrender.com/getWishListOfUser/${userId}`);
                 // Update state with wishlist items
                 setWishlistItems(response.data.items);
             } catch (error) {
