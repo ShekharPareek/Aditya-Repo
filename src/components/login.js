@@ -21,7 +21,7 @@ const Login = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://localhost:3000/login", {
+      const response = await fetch("https://dickkny.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -58,7 +58,7 @@ const Login = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://localhost:3000/signup", {
+      const response = await fetch("https://dickkny.onrender.com/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
