@@ -19,7 +19,7 @@ class Home extends Component {
 
     componentDidMount() {
         // Fetch featured products
-        axios.get('http://localhost:3000/getAllProduct')
+        axios.get('https://dickkny.onrender.com/getAllProduct')
             .then(response => {
                 // Check if response data contains products array
                 if (response.data && response.data.data) {
@@ -54,7 +54,7 @@ class Home extends Component {
         };
     
         // Make request to addToCart endpoint with the userId
-        axios.post('http://localhost:3000/addToCart', payload)
+        axios.post('https://dickkny.onrender.com/addToCart', payload)
             .then(response => {
                 // Handle success
                 console.log('Product added to cart:', productId);
@@ -81,7 +81,7 @@ class Home extends Component {
             productId: productId
         };
     
-        axios.post('http://localhost:3000/addToWishlist', payload)
+        axios.post('https://dickkny.onrender.com/addToWishlist', payload)
             .then(response => {
                 console.log('Product added to wishlist:', productId);
             })
